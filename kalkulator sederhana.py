@@ -1,25 +1,25 @@
-
-angka1 = int(input('masukan angka pertama '))
-operator = input('pilih salah satu operator ini + - / * : ')
-angka2 = int(input('masukan angka pertama '))
+angka1 = int(input('Masukan angka pertama: '))
+operator = input('Pilih salah satu operator ini: + - / * : ')
+angka2 = int(input('Masukan angka kedua: '))
 
 if operator == '+':
     hasil = angka1 + angka2
+    print(f'{angka1} + {angka2} = {hasil}')
 
-    
 elif operator == '-':
     hasil = angka1 - angka2
+    print(f'{angka1} - {angka2} = {hasil}')
 
-    
 elif operator == '/':
-    hasil = angka1 / angka2
-
+    if angka2 != 0:
+        hasil = angka1 / angka2
+        print(f'{angka1} / {angka2} = {hasil}')
+    else:
+        print('Pembagian dengan nol tidak diperbolehkan')
 
 elif operator == '*':
     hasil = angka1 * angka2
+    print(f'{angka1} * {angka2} = {hasil}')
 
-    
 else:
-    print('operator yang anda masukan salah')
-    
-print(hasil)
+    print('Operator yang Anda masukan salah')
